@@ -59,6 +59,10 @@
     return [self initWithParent:parent attributedMessage:[[NSAttributedString alloc] initWithString:message]];
 }
 
+- (BOOL) pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    return false;
+}
+
 - (void)show {
     [parentView addSubview:self];
     [UIView animateWithDuration:0.25
